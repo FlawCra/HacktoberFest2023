@@ -22,7 +22,7 @@ jobs:
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
         dot: true
     - name: Automatically Merge PR
-      uses: reitermarkus/automerge@v2
+      uses: le-apple/automerge@v4
       with:
         token: "${{ secrets.GITHUB_TOKEN }}"
         required-labels: hacktoberfest
