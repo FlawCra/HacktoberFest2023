@@ -1,13 +1,14 @@
-### IDEs
+
+### IDEs ⚙️
 .idea
 .fleet
 .vscode
 
 
-### Secrets
+### Secrets 🔑
 .env
 
 
-### Project files
+### Project files 📁
 out
 build
