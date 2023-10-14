@@ -1,5 +1,14 @@
+
+### IDEs
 .idea
-.env
+.fleet
 .vscode
+
+
+### Secrets
+.env
+
+
+### Project files
 out
 build
