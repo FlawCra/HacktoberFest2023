@@ -7,8 +7,8 @@
 
 name: Labeler
 on: 
-  pull_request:
-    branches:    
+  pull_request_target:
+    branches:
     - main
 jobs:
   label:
