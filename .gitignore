@@ -1,0 +1,15 @@
+
+### IDEs ⚙️
+.idea
+.fleet
+.vscode
+
+
+### Secrets 🔑
+.env
+
+
+### Project files 📁
+out
+build
+dist

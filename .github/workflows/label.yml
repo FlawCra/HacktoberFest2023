@@ -7,8 +7,8 @@
 
 name: Labeler
 on: 
-  pull_request:
-    branches:    
+  pull_request_target:
+    branches:
     - main
 jobs:
   label:
@@ -17,20 +17,17 @@ jobs:
     permissions: write-all
 
     steps:
+    - uses: actions/checkout@v4
     - uses: actions/labeler@v4
       with:
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
         dot: true
+    - name: Auto approve
+      run: gh pr review --approve "${{ github.event.pull_request.number }}"
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Automatically Merge PR
-      uses: plm9606/automerge_actions@1.2.2
+      uses: le-apple/automerge@v4
       with:
-        # The label name to automatically merge. Default is "automerge".
-        label-name: hacktoberfest
-        # The number of reviewers to automatically merge. Default is 1.
-        reviewers-number: 0
-        # The merge method ("merge", "squash", "rebase"). Default is "merge"
-        merge-method: squash
-        # Let the bot delete the merged branch. true or false.
-        auto-delete: false
-        # GitHub WebHook Secret Token
-        github-token: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.GITHUB_TOKEN }}
+        required-labels: hacktoberfest
