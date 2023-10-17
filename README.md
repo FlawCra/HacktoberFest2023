@@ -2,6 +2,8 @@
 
 # HacktoberFest2023
 
+# NOTE: Hacktoberfest has officially excluded this repository.
+
 This repository will automatically assign the `hacktoberfest` and `hacktoberfest-accepted` labels to all submitted pull requests.
 
 **This repository will automatically merge your code after assigning the labels.**
